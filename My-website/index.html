@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kaeleb's Website</title>
+    <link rel="stylesheet" type="text/css" href=""fancy.css>
+</head>
+<body>
+    <header>
+        <h1>Hello People Welcome to my First Website</h1>
+    </header>
+    <main>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. <strong>Integer</strong> bibendum ligula ac magna finibus congue. Aliquam id blandit est. Duis <em>ac</em> venenatis euismod tempus. Vestibulum lobortis sodales vulputate. Sed accumsan non diam in tempor. In a tellus quis nulla feugiat tincidunt sit amet eget dui. Suspendisse risus ligula, porttitor nec nisi sit amet, bibendum malesuada velit. In lacinia diam nec lobortis blandit. Donec convallis sem ut velit convallis, vitae vulputate nisl aliquam. Phasellus facilisis leo gravida quam suscipit aliquam. Sed sed lobortis odio. Ut in congue enim. Cras dictum interdum sagittis. Etiam nisl orci, placerat et vehicula ac, posuere convallis enim. </p>
+        <p><strong>Praesent condimentum sollicitudin elit, quis tincidunt dolor volutpat eu. Pellentesque nec tellus nec augue gravida eleifend quis quis elit. Curabitur posuere sagittis egestas. Proin lorem ante, ullamcorper id odio sollicitudin, venenatis blandit massa. Phasellus varius vitae ipsum quis vehicula. Nunc condimentum hendrerit dolor sit amet consequat. <em>Suspendisse potenti<em></em></strong></p>
+        <p>Sed vestibulum accumsan rutrum. Duis tincidunt eros purus, quis varius augue suscipit vitae. Nam mattis, justo non commodo luctus, turpis leo dictum mi, id lacinia eros elit sit amet massa. Sed sed magna et nulla pellentesque tristique. Phasellus porta mi libero, <em>Aterno</em> in elementum elit placerat vel. <strong> vel augue et nulla aliquam posuere sed sed magna.</strong> Phasellus ut sagittis nisl. Nunc ut aliquet urna, vitae congue nisl. </p>
+        <p>Ut auctor quam in metus varius eleifend id in nisl. Donec facilisis dolor vel purus convallis consequat. Aliquam orci tortor, rhoncus a ipsum iaculis, feugiat pellentesque risus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi efficitur, neque vitae ultrices rutrum, quam tellus pretium dolor, vitae tempus mauris erat a dui. Vestibulum egestas, ex ac interdum congue, libero quam tempor dolor, et scelerisque nisl odio et enim. Nulla tincidunt ornare risus ac tempor. Cras eros justo, finibus non neque id, porta rutrum justo. <strong>veni</strong><em>vecio</em> vehicula viverra arcu, dapibus rutrum turpis aliquet at. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; </p>
+        <nav>
+            <a href="about.html">About</a>
+            <a href ="resume.html">Resume</a>
+        </nav>
+        <h2>Tic-Tac-Toe</h2>
+        <p id="turn">x's turn</p>
+        <table>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </table>
+    </main>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        var turn = "x";
+        $("td").on("click", function (){
+            console.log("clicked");
+            var $square = $(this);
+            if($square.text() =="") {
+                $square.text(turn);
+                if(turn == "x"){
+                    turn == "o";
+                } else {
+                    turn = "x";
+                }
+                $("#turn").text(turn + "'s turn");
+            }
+        });
+    </script>
+</body>
+</html>
